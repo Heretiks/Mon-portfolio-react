@@ -1,0 +1,73 @@
+/* ancien preloader, pas responsive  */
+/*
+	.preloader {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--main);
+	}
+
+	.title {
+		font-size: 150px;
+		color: white;
+		opacity: 0;
+		animation: fadeIn 2s forwards;
+	}
+*/
+
+/* Preloader overlay */
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--main);
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+	font-size: 130px;
+}
+
+.preloader.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.loading {
+	overflow: hidden;
+}
+
+
+@media (0px <= width < 500px) {
+	.title {
+		font-size: 60px;
+	}
+}
+
+@media (500px <= width < 1020px) {
+	.title {
+		font-size: 85px;
+	}
+}
+
+@media (1020px <= width < 1441px ) {
+	.title {
+		font-size: 110px;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		color: white; /* Démarre en blanc */
+	}
+	to {
+		opacity: 1;
+		color: black; /* Se termine en noir */
+	}
+}

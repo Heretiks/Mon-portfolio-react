@@ -1,0 +1,28 @@
+
+.not-found-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	margin: 5%;
+}
+
+.not-found-heading {
+	font-size: 48px;
+	color: #333;
+}
+
+.not-found-text {
+	font-size: 18px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+.not-found-link {
+	color: var(--dark);
+}
+
+.not-found-link:hover {
+	transform: scale(1.05);
+	border-bottom: 1px solid var(--dark);
+}

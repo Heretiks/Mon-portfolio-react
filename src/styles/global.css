@@ -1,0 +1,110 @@
+@import 'font.css';
+@import 'contact.css';
+@import 'about.css';
+@import 'projects.css';
+@import 'notFound.css';
+
+@import './parts/footer.css';
+@import './parts/headerv2.css';
+@import './parts/preloader.css';
+@import './parts/sandSimulation.css';
+
+
+:root {
+	--light: #FFFFFF;
+	--dark: #000000;
+	--main: #FFE0CB;
+	--main-hover: #F1CFBB;
+	--grey: #5A5A5A;
+}
+
+
+body {
+	font-family: "Space Mono", monospace;
+	margin: 0;
+	padding: 0;
+	cursor: default;
+	max-width: 100%;
+	overflow-x: hidden;
+	transition: 0.3s ease-in;
+}
+
+body:has(.requires-no-scroll) {
+	overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+	display: none; /* Chrome, Safari and Opera */
+}
+
+* {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Dark Mode */
+.dark {
+	background-color: var(--dark);
+	color: var(--main);
+	transition: 0.3s ease-in;
+
+	a, h1, h2, h3, h4, svg {
+		color: var(--main);
+		transition: 0.3s ease-in;
+	}
+
+	svg {
+		color: var(--main);
+		fill: var(--main);
+		transition: 0.3s ease-in;
+	}
+
+	/* Page contact */
+	textarea {
+		background-color: var(--dark);
+		color: var(--main);
+		transition: 0.3s ease-in;
+	}
+	textarea::placeholder, input::placeholder {
+		color: var(--main);
+		transition: 0.3s ease-in;
+	}
+	button > a {
+		color: var(--dark);
+	}
+
+	/* Page détail projet */
+	.point-info-type {
+		border-bottom: 1px solid var(--main);
+	}
+	.point:before {
+		background-color: var(--grey);
+		transition: 0.3s ease-in;
+	}
+	.project-more-details {
+		border-top: 1px solid var(--main);
+	}
+	.to-invert>img {
+		filter: invert(100%);
+		-webkit-filter: invert(100%);
+	}
+
+	/* Mini Description projet quand hover */
+	.project:hover .project-summary>h3 {
+		border-bottom: 1px solid var(--main);
+	}
+
+}
+
+
+/* Changement svg quand changement dark/light mode */
+.icon {
+	display: none;
+	transition: 0.3s ease-in;
+}
+
+.icon.active {
+	display: inline;
+	transition: 0.3s ease-in;
+}

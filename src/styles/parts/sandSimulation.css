@@ -1,0 +1,23 @@
+.sand-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center-text {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: monospace;
+	font-size: 16px;
+	color: white;
+	animation: scaleAnimation 6s infinite;
+}
+
+@keyframes scaleAnimation {
+	0% { transform: translate(-50%, -50%) scale(1); }
+	50% { transform: translate(-50%, -50%) scale(1.5); }
+	100% { transform: translate(-50%, -50%) scale(1); }
+}

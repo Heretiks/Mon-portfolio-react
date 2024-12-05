@@ -1,0 +1,96 @@
+.about-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*height: 150vh;*/
+	margin-bottom: 100px;
+}
+
+.about-photo-section {
+	position: relative;
+	width: 50%;
+}
+
+.about-title {
+	position: absolute;
+	top: 22%;
+	left: 39%;
+	font-size: 100px;
+	font-weight: 500;
+	z-index: 1;
+}
+
+.about-photo-section>img {
+	width: 75%;
+	margin: 18% 0 0 10%;
+	height: auto;
+	object-fit: cover;
+}
+
+.text-section {
+	margin-top: 20%;
+	padding: 0 20px;
+	max-width: 40%;
+	max-height: 60%;
+	overflow: hidden;
+}
+
+.about-paragraph {
+	margin-bottom: 25px;
+}
+
+.about-paragraph:nth-last-child(1) {
+	margin-bottom: 0;
+}
+
+.about-pro {
+	margin: 0 17% 25px;
+}
+
+.about-pro-title {
+	text-align: center;
+	color: var(--dark);
+	font-size: 60px;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+.linkedIn-link {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 20px;
+	width: 100%;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.about-lettre {
+	margin: 10% 17% 25px;
+}
+
+.about-lettre-title {
+	text-align: center;
+	color: var(--dark);
+	font-size: 60px;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+.about-lettre-text {
+
+}
+
+.about-chinese {
+	margin: 10% 17% 25px;
+}
+
+.about-chinese-title {
+	text-align: center;
+	color: var(--dark);
+	font-size: 60px;
+	font-weight: 500;
+	text-decoration: underline;
+}
+.about-chinese-text {
+	text-align: start;
+}

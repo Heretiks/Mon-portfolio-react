@@ -1,0 +1,151 @@
+.container-contact {
+	font-family: 'Space Mono', monospace;
+	display: flex;
+	width: 97vw;
+	height: 90vh;
+	margin: 2vh 1.5vw;
+}
+
+.big-text-contact {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	align-items: flex-start;
+	gap: 15%;
+	width: 40%;
+	height: 90%;
+	margin: 0 0 0 10px;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	writing-mode: vertical-rl;
+	text-orientation: sideways;
+	transform: rotate(-180deg);
+}
+
+.big-text-contact .title1 {
+	font-size: 4rem;
+	margin: 0;
+}
+
+.big-text-contact .title2 {
+	margin: 0;
+}
+
+.container-form-contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 53%;
+	margin: 20px 10px 50px;
+	padding: 20px;
+	/*background-color: var(--light);*/
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container-contact {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-bottom: none;
+}
+
+.title-contact {
+	color: var(--dark);
+	text-align: center;
+	margin: 0;
+}
+
+.form-contact {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	width: 70%;
+}
+
+.input-label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.input-field {
+	font-family: "Space Mono", monospace;
+	font-size: 0.8rem;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	transition: border-color 0.3s;
+	font-weight: normal;
+	width: auto;
+}
+
+.input-field:focus {
+	border-color: var(--main-hover);
+}
+
+.input-field::placeholder {
+	color: #666666;
+}
+
+.message-field {
+	height: 12vh;
+	resize: vertical;
+	transition: 0.3s ease-in;
+}
+
+.message-field:focus {
+	border-color: var(--main-hover);
+	outline-color: var(--main-hover);
+}
+
+.message-field:focus-visible {
+	border-color: var(--main-hover);
+	outline-color: var(--main-hover);
+}
+
+.submit-button {
+	font-family: "Space Mono", monospace;
+	background-color: var(--main);
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+	background-color: var(--main-hover);
+}
+
+.success-message {
+	color: green;
+	font-size: 1rem;
+}
+
+.error-message {
+	color: red;
+	font-size: 1rem;
+}
+
+.captcha-and-submit {
+	display: flex;
+	width: 60%;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.form-reCaptcha {
+}
+
+
+
+@media (1450px <= width ) {
+	.container-form-contact {
+		width: 60%;
+	}
+}
