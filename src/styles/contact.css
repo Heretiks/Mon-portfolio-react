@@ -48,6 +48,7 @@
 	flex-direction: column;
 	width: 100%;
 	border-bottom: none;
+	align-items: center;
 }
 
 .title-contact {
@@ -83,10 +84,12 @@
 	transition: border-color 0.3s;
 	font-weight: normal;
 	width: auto;
+	background: none;
 }
 
 .input-field:focus {
 	border-color: var(--main-hover);
+	outline: none;
 }
 
 .input-field::placeholder {
@@ -137,9 +140,6 @@
 	width: 60%;
 	align-items: center;
 	justify-content: space-around;
-}
-
-.form-reCaptcha {
 }
 
 

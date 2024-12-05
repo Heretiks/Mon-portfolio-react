@@ -14,7 +14,7 @@
 	--light: #FFFFFF;
 	--dark: #000000;
 	--main: #FFE0CB;
-	--main-hover: #F1CFBB;
+	--main-hover: #e4b4a5;
 	--grey: #5A5A5A;
 }
 
@@ -60,12 +60,16 @@ body:has(.requires-no-scroll) {
 		transition: 0.3s ease-in;
 	}
 
-	/* Page contact */
-	textarea {
-		background-color: var(--dark);
-		color: var(--main);
-		transition: 0.3s ease-in;
+
+
+	/* Header */
+	.c-nav-tool_list>li>a:hover {
+		border-bottom: 1px solid var(--main);
 	}
+
+
+
+	/* Page contact */
 	textarea::placeholder, input::placeholder {
 		color: var(--main);
 		transition: 0.3s ease-in;
@@ -73,6 +77,25 @@ body:has(.requires-no-scroll) {
 	button > a {
 		color: var(--dark);
 	}
+	.input-field {
+		color: var(--main);
+	}
+	.input-field:focus {
+		color: var(--main);
+	}
+	.input-field::placeholder {
+		color: var(--main-hover);
+	}
+	input:-webkit-autofill {
+		background-color: var(--dark) !important;
+		color: var(--main) !important;
+	}
+	input:-webkit-autofill:focus {
+		background-color: var(--dark) !important;
+		color: var(--main) !important;
+	}
+
+
 
 	/* Page détail projet */
 	.point-info-type {
@@ -90,7 +113,9 @@ body:has(.requires-no-scroll) {
 		-webkit-filter: invert(100%);
 	}
 
-	/* Mini Description projet quand hover */
+
+
+	/* Page liste projets */
 	.project:hover .project-summary>h3 {
 		border-bottom: 1px solid var(--main);
 	}

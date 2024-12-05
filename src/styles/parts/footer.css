@@ -56,29 +56,7 @@ button {
 	padding: 0 1rem;
 }
 
-form {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: min(100%, 400px);
-	border-bottom: 1px solid var(--dark);
-}
 
-input {
-	padding: 0.75rem 0;
-	border: none;
-	background: none;
-	transition: border 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-	border-radius: 0;
-	width: 100%;
-	font-size: 1.05rem;
-}
-input:focus {
-	outline: none;
-}
-input::placeholder {
-	color: var(--dark);
-}
 @media (min-width: 675px) {
 	.layout {
 		display: flex;
@@ -93,13 +71,13 @@ input::placeholder {
 		width: 25%;
 	}
 }
-form {
-	position: relative;
-}
+
+
 svg {
 	margin: 0.5rem;
 	transition: 0.3s ease-in;
 }
+
 .c-2 {
 	display: flex;
 	justify-content: space-between;
@@ -140,9 +118,14 @@ svg {
 }
 
 
+.c-nav-tool_list>li {
+	margin-top: 0.5rem;
+}
+
 .c-nav-tool_list>li>a:hover {
 	border-bottom: 1px solid var(--dark);
 }
+
 .layout_item>ul>li>a:hover {
 	scale: 1.2;
 }
