@@ -50,13 +50,13 @@ body:has(.requires-no-scroll) {
 	transition: 0.3s ease-in;
 
 	a, h1, h2, h3, h4, svg {
-		color: var(--main);
+		color: var(--main) !important;
 		transition: 0.3s ease-in;
 	}
 
 	svg {
-		color: var(--main);
-		fill: var(--main);
+		color: var(--main) !important;
+		fill: var(--main) !important;
 		transition: 0.3s ease-in;
 	}
 
@@ -64,27 +64,30 @@ body:has(.requires-no-scroll) {
 
 	/* Header */
 	.c-nav-tool_list>li>a:hover {
-		border-bottom: 1px solid var(--main);
+		border-bottom: 1px solid var(--main) !important;
 	}
 
 
 
 	/* Page contact */
+	.container-form-contact {
+		box-shadow: 0 2px 4px var(--main);
+	}
 	textarea::placeholder, input::placeholder {
-		color: var(--main);
+		color: var(--main) !important;
 		transition: 0.3s ease-in;
 	}
 	button > a {
-		color: var(--dark);
+		color: var(--dark) !important;
 	}
 	.input-field {
-		color: var(--main);
+		color: var(--main) !important;
 	}
 	.input-field:focus {
-		color: var(--main);
+		color: var(--main) !important;
 	}
 	.input-field::placeholder {
-		color: var(--main-hover);
+		color: var(--main-hover) !important;
 	}
 	input:-webkit-autofill {
 		background-color: var(--dark) !important;
@@ -99,14 +102,14 @@ body:has(.requires-no-scroll) {
 
 	/* Page détail projet */
 	.point-info-type {
-		border-bottom: 1px solid var(--main);
+		border-bottom: 1px solid var(--main) !important;
 	}
 	.point:before {
-		background-color: var(--grey);
+		background-color: var(--grey) !important;
 		transition: 0.3s ease-in;
 	}
 	.project-more-details {
-		border-top: 1px solid var(--main);
+		border-top: 1px solid var(--main) !important;
 	}
 	.to-invert>img {
 		filter: invert(100%);
@@ -117,7 +120,7 @@ body:has(.requires-no-scroll) {
 
 	/* Page liste projets */
 	.project:hover .project-summary>h3 {
-		border-bottom: 1px solid var(--main);
+		border-bottom: 1px solid var(--main) !important;
 	}
 
 }

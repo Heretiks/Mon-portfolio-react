@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import Emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 import '../styles/global.css';
 
@@ -85,7 +85,7 @@ function Contact() {
         // EmailJS configuration
         setIsSending(true);
         try {
-            const result = await emailjs.send(
+            const result = await Emailjs.send(
                 'service_lfnnnup', // service ID
                 'template_og37lsc', // template ID
                 sanitizedData,
@@ -147,26 +147,26 @@ function Contact() {
                                 required
                             />
                         </div>
-
-                        <div className="captcha-and-submit">
-                            {!success ? (
-                                <>
+                        {!success ? (
+                            <div>
+                                <div className="recaptcha-container">
                                     <ReCAPTCHA
-                                        sitekey="6Lcu0owqAAAAAElmKBpgtXWaz9tzvduFae_VAR-R" // Votre clé publique reCAPTCHA
-                                        onChange={handleCaptchaChange} // Met à jour le token lorsqu'il est validé
-                                        className="form-reCaptcha"
+                                        sitekey="6Lcu0owqAAAAAElmKBpgtXWaz9tzvduFae_VAR-R"
+                                        onChange={handleCaptchaChange}
                                     />
-                                    <button
-                                        type="submit"
-                                        className="submit-button"
-                                        disabled={isSending}
-                                    >
-                                        {isSending ? 'Envoi...' : 'Envoyer'}
-                                    </button>
-                                </>
-                            ) : (
-                                <p className="success-message">Message envoyé avec succès !</p>
-                            )}
+                                </div>
+                            </div>
+                        ) : (
+                            <p className="success-message">Message envoyé avec succès !</p>
+                        )}
+                        <div className="submit">
+                        <button
+                                type="submit"
+                                className="submit-button"
+                                disabled={isSending}
+                            >
+                                {isSending ? 'Envoi...' : 'Envoyer'}
+                            </button>
                         </div>
 
                     </form>

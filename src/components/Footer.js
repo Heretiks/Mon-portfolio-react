@@ -124,7 +124,7 @@ function Footer() {
                                 <h3>Be curious.</h3>
                             </div>
 
-                            <div className="layout_item w-25">
+                            <div className="layout_item w-25 menu-list">
                                 <nav className="c-nav-tool">
                                     <h4 className="c-nav-tool_title">Menu</h4>
                                     <ul className="c-nav-tool_list">

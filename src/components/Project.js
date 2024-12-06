@@ -3,10 +3,6 @@ import {Link, Navigate, useParams} from 'react-router-dom';
 import projects from '../components/ProjectData';
 import '../styles/global.css';
 
-
-// import composant projet
-// import SandSimulation from '../components/SandSimulation';
-
 function Project({ id }) {
 
     useEffect(() => {
@@ -37,7 +33,7 @@ function Project({ id }) {
             <div className="project-full">
                 <div className="project-summary-full">
                     <div className="project-summary-details-full">
-                        <h3>
+                        <h3 className="project-summary-title">
                             <a href={link} target={component ? undefined : "_blank"} rel={'noreferrer'}>
                                 {name}
                             </a>
@@ -54,8 +50,8 @@ function Project({ id }) {
                 </div>
 
                 <div className="project-details-full">
-                    <div className="descritpion">
-                        <p>{description}</p>
+                    <div className="description">
+                        <p className="description-text" >{description}</p>
                         <div className="project-links-full">
                             <button className="project-link-full">
                                 {component ? (
@@ -68,7 +64,7 @@ function Project({ id }) {
                             </button>
                         </div>
                     </div>
-                    <img src={image} alt={name} />
+                    <img className="site-image" src={image} alt={name} />
                 </div>
 
                 <div className="project-more-details">
@@ -92,7 +88,7 @@ function Project({ id }) {
                     </div>
                     <div className="point">
                         <div className="point-info">
-                            <p className="point-info-type">Détails : </p>
+                            <p className="point-info-type">D-A : </p>
                             {infos[3]}
                         </div>
                     </div>
@@ -120,7 +116,7 @@ function Project({ id }) {
                         <img  src={image} alt={name} />
                     </Link>
 
-                    <p>{miniDescription}</p>
+                    <p className="project-mini-description">{miniDescription}</p>
                     <div className="project-links">
                         <button className="project-link">
                             <Link to={link} target={"_blank"} rel={'noreferrer'}>Site</Link>

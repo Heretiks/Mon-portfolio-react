@@ -8,14 +8,16 @@ import client2 from '../assets/projects/project2/client.png'
 
 import image3 from '../assets/projects/project3/image.png'
 import SandSimulation from '../components/SandSimulation';
+import client3 from '../assets/projects/project3/client.png'
 
 import image4 from '../assets/projects/project4/image.png'
+import client4 from '../assets/projects/project4/client.png'
 
 
 const projectsData = [
     {
         id: 1,
-        name: 'TheGobeliners',
+        name: 'The Gobeliners',
         date: '2024-06',
         technologies: ['React', 'ThreeJS', 'Directus'],
         description: "Realisation du nouveau site de l'entreprise TheGobeliners." +
@@ -25,7 +27,7 @@ const projectsData = [
         miniDescription: 'Realisation du nouveau site de l\'entreprise TheGobeliners.' +
             ' Principalement créer en ThreeJS, ce site montre aussi mes compétences en 3D.',
         image: image1,
-        infos: ['En cours', 'The Gobeliners', 'Développeur Principal', 'Graphisme par LNR Agency'],
+        infos: ['En cours', 'The Gobeliners', 'Développeur Principal', 'LNR Agency'],
         client: client1,
         invertLogo: false,
         link: 'https://playground.staging.thegobeliners.pro/'
@@ -42,7 +44,7 @@ const projectsData = [
         miniDescription: 'Réalisation d\'un portfolio pour une graphiste en collaboration avec elle.' +
             ' Le projet est principalement réalisé avec React. Il est inspiré de son art, ses goûts, son ADN.',
         image: image2,
-        infos: ['2 semaines', 'MCmsg', 'Développeur', 'Collab avec MCmsg'],
+        infos: ['2 semaines', 'MCmsg', 'Développeur', 'MCmsg'],
         client: client2,
         invertLogo: true,
         link: 'https://maellecamissogo.myportfolio.com/'
@@ -58,8 +60,8 @@ const projectsData = [
         miniDescription: 'Un daily challenge personnel, réalisé avec p5.js.' +
             ' Pas grand chose à savoir de plus, mais il faut essayer !',
         image: image3,
-        infos: ['1 jour', 'Projet personnel', 'Développeur', 'Daily challenge'],
-        client: 'LrgCorp',
+        infos: ['1 jour', 'Projet personnel', 'Développeur', 'Moi même'],
+        client: client3,
         invertLogo: true,
         link: '/projects/3#the-project',
         component: SandSimulation
@@ -76,8 +78,8 @@ const projectsData = [
         miniDescription: 'Un platformer, créer pour le plaisir et pour découvrir Unity.' +
             ' Il s\'agit d\'un jeu de plateforme en 2D, dans lequel on doit survivre et atteindre la sortie.',
         image: image4,
-        infos: ['1 mois', 'Projet personnel', 'Développeur', 'Pour apprendre'],
-        client: 'LrgCorp',
+        infos: ['1 mois', 'Projet personnel', 'Développeur', 'Moi même'],
+        client: client4,
         invertLogo: true,
         link: '',
     },
