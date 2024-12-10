@@ -30,7 +30,14 @@
 	justify-content: center;
 	align-items: center;
 	transition: opacity 0.5s ease, visibility 0.5s ease;
-	font-size: 130px;
+
+	.title {
+		text-align: center;
+		color: var(--dark);
+		font-family: "Space Mono", monospace;
+		font-size: 130px;
+		font-weight: bold;
+	}
 }
 
 .preloader.hidden {
@@ -44,30 +51,29 @@
 
 
 @media (0px <= width < 500px) {
-	.title {
-		font-size: 60px;
+	.preloader {
+
+		.title {
+			font-size: 60px;
+		}
 	}
+
 }
 
 @media (500px <= width < 1020px) {
-	.title {
-		font-size: 85px;
+	.preloader {
+
+		.title {
+			font-size: 85px;
+		}
 	}
 }
 
 @media (1020px <= width < 1441px ) {
-	.title {
-		font-size: 110px;
-	}
-}
+	.preloader {
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		color: white; /* Démarre en blanc */
-	}
-	to {
-		opacity: 1;
-		color: black; /* Se termine en noir */
+		.title {
+			font-size: 110px;
+		}
 	}
 }

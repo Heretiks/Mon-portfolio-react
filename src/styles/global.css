@@ -5,7 +5,7 @@
 @import 'notFound.css';
 
 @import './parts/footer.css';
-@import './parts/headerv2.css';
+@import 'parts/header.css';
 @import './parts/preloader.css';
 @import './parts/sandSimulation.css';
 
@@ -16,8 +16,16 @@
 	--main: #FFE0CB;
 	--main-hover: #e4b4a5;
 	--grey: #5A5A5A;
+	--lightGrey: #ccc;
 }
 
+* {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar {
+	display: none; /* Chrome, Safari and Opera */
+}
 
 body {
 	font-family: "Space Mono", monospace;
@@ -25,21 +33,17 @@ body {
 	padding: 0;
 	cursor: default;
 	max-width: 100%;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/ /* Commenté pour Lenis */
 	transition: 0.3s ease-in;
+
+	/* Pour Lenis */
+	overflow: auto;
+	height: 100%;
 }
 
-body:has(.requires-no-scroll) {
+/* Inutile car Lenis ? */
+.requires-no-scroll {
 	overflow: hidden;
-}
-
-*::-webkit-scrollbar {
-	display: none; /* Chrome, Safari and Opera */
-}
-
-* {
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
 }
 
 
@@ -66,6 +70,13 @@ body:has(.requires-no-scroll) {
 	.c-nav-tool_list>li>a:hover {
 		border-bottom: 1px solid var(--main) !important;
 	}
+	.nav-container>.logo {
+		color: var(--dark) !important;
+	}
+	.menu-items>li>a {
+		color: var(--dark) !important;
+	}
+
 
 
 
@@ -115,12 +126,37 @@ body:has(.requires-no-scroll) {
 		filter: invert(100%);
 		-webkit-filter: invert(100%);
 	}
+	.project-summary-title {
+		border-bottom: 1px solid var(--main) !important;
+	}
 
 
 
 	/* Page liste projets */
-	.project:hover .project-summary>h3 {
+	.project:hover .project-summary>.project-name {
 		border-bottom: 1px solid var(--main) !important;
+	}
+
+	@media (max-width: 980px) {
+		.project-summary>.project-name {
+			border-bottom: 1px solid var(--main) !important;
+		}
+	}
+
+
+	/* Page Not Found */
+	.not-found-container {
+
+		.not-found-text {
+			color: var(--main) !important;
+
+			.not-found-link {
+
+				&:hover {
+					border-bottom: 1px solid var(--main) !important;
+				}
+			}
+		}
 	}
 
 }

@@ -27,6 +27,7 @@
 		}
 
 		.title2 {
+			font-size: 2rem;
 			margin: 0;
 		}
 	}
@@ -73,7 +74,7 @@
 					font-family: "Space Mono", monospace;
 					font-size: 0.8rem;
 					padding: 10px;
-					border: 1px solid #ccc;
+					border: 1px solid var(--lightGrey);
 					border-radius: 4px;
 					transition: border-color 0.3s;
 					font-weight: normal;

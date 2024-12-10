@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import '../styles/global.css';
-import Me from '../assets/avaturn_screenshot.jpg'
+import maPhoto from '../assets/photo-de-profil.webp'
 
 function About() {
 
@@ -13,7 +13,7 @@ function About() {
             <div className="about-container">
                 <h1 className="about-title">A PROPOS</h1>
                 <div className="about-photo-section">
-                    <img src={Me} alt="Me"/>
+                    <img src={maPhoto} alt="Représentation 3D de Julien Larguier"/>
                 </div>
                 <div className="text-section">
                     {/* WIP : modifier le texte du about me */}

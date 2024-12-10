@@ -30,6 +30,7 @@ function ThreeIndexSceneV2() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
         let scene = new THREE.Scene();
         scene.background = new THREE.Color(0, 0, 0);
@@ -62,6 +63,11 @@ function ThreeIndexSceneV2() {
         controls.enableZoom = false;
         controls.maxPolarAngle = (Math.PI/2) - 0.1;
         controlsRef.current = controls;
+
+        if (isTouchDevice) {
+            renderer.domElement.style.pointerEvents = 'none';
+            controls.enabled = false;
+        }
 
         const loader = new GLTFLoader();
         let mixer = new THREE.AnimationMixer();

@@ -5,7 +5,7 @@ const Preloader = () => {
     return (
         <div className="preloader">
             {/* WIP : voir pour animer mon logo : video ? */}
-            <h1 className="title">Lrg Corp</h1>
+            <p className="title">Lrg Corp</p>
         </div>
     );
 }

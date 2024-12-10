@@ -28,16 +28,16 @@ function Project({ id }) {
 
     // Si page détail projet
     if (isProjectPage) {
-        // WIP : manque a ajouter la vidéo si le projet ne contient pas de composant
+        // WIP : manque à ajouter la vidéo si le projet ne contient pas de composant
         return (
             <div className="project-full">
                 <div className="project-summary-full">
                     <div className="project-summary-details-full">
-                        <h3 className="project-summary-title">
+                        <h2 className="project-summary-title">
                             <a href={link} target={component ? undefined : "_blank"} rel={'noreferrer'}>
                                 {name}
                             </a>
-                        </h3>
+                        </h2>
                         <div className="project-description-full">
                             <p>{date}</p>
                             <p>-</p>
@@ -45,7 +45,7 @@ function Project({ id }) {
                         </div>
                     </div>
                     <div className={`project-summary-client-full ${invertLogo ? 'to-invert' : ''}`}>
-                        <img src={client} alt="Logo client" />
+                        <img src={client} alt="Logo du client pour lequel le projet est réalisé" />
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@ function Project({ id }) {
                             </button>
                         </div>
                     </div>
-                    <img className="site-image" src={image} alt={name} />
+                    <img className="site-image" src={image} alt={`Page d'acceuil du site de ${name}`} />
                 </div>
 
                 <div className="project-more-details">
@@ -107,13 +107,14 @@ function Project({ id }) {
         return (
             <div className="project">
                 <Link to={`/projects/${id}`} className="project-summary">
-                    <h3>{name}</h3>
+                    {/*WIP : Link à mettre sur le H2 seulement, et div a la place de Link*/}
+                    <h2 className="project-name">{name}</h2>
                     <p>{date}</p>
                     <p>{technologies.join(', ')}</p>
                 </Link>
                 <div className="project-details">
                     <Link to={`/projects/${id}`} className={'project-img'}>
-                        <img  src={image} alt={name} />
+                        <img  src={image} alt={`Page d'acceuil du site de ${name}`} />
                     </Link>
 
                     <p className="project-mini-description">{miniDescription}</p>

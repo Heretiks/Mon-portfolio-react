@@ -148,8 +148,8 @@ svg {
 	}
 }
 
-/* < a 450px */
-@media (max-width: 450px) {
+/* < a 675px */
+@media (max-width: 675px) {
 	.c-2 {
 		margin-top: 1.5vh;
 		align-items: center;
@@ -160,4 +160,34 @@ svg {
 		display: flex;
 		justify-content: flex-end;
 	}
+
+	.footer {
+
+		.container {
+			padding: 0;
+
+			.footer_inner {
+
+				.layout {
+
+					.w-50 {
+
+						h3 {
+							width: 100%;
+						}
+
+					}
+
+					.menu-list {
+						margin-right: 5vw;
+					}
+				}
+			}
+
+			.footer_copyright {
+				padding: 0 1rem;
+			}
+		}
+	}
+
 }

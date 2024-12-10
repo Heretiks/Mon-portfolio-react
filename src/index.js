@@ -4,14 +4,17 @@ import { BrowserRouter} from 'react-router-dom';
 import './styles/global.css';
 import App from './App';
 //import reportWebVitals from './reportWebVitals';
+import { HelmetProvider } from 'react-helmet-async';
 
 const rootEl = document.getElementById('root');
 const root = ReactDOM.createRoot(rootEl)
 
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+    <HelmetProvider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </HelmetProvider>
 );
 
 //reportWebVitals(console.log);

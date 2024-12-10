@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 import '../styles/global.css';
+import { Helmet } from 'react-helmet-async';
 
 function Contact() {
     useEffect(() => {
@@ -17,7 +18,6 @@ function Contact() {
     const [isSending, setIsSending] = useState(false);
     const [success, setSuccess] = useState(false);
     const [captchaToken, setCaptchaToken] = useState(null);
-
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -64,7 +64,6 @@ function Contact() {
         setCaptchaToken(token);
     };
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -103,14 +102,21 @@ function Contact() {
 
     return (
         <>
+            <Helmet>
+                <title>Contact</title>
+                <meta name="description"
+                      content="Contactez Julien Larguier pour discuter de vos projets web. Remplissez le formulaire de contact pour toutes questions sur mes services de développement."/>
+                <meta name="keywords"
+                      content="contact, développement web, JavaScript, React, WordPress, consultation, projet web, formulaire de contact, Julien Larguier"/>
+            </Helmet>
             <div className="container-contact">
                 <div className="big-text-contact">
-                    <h1 className="title2">Vous voulez en parler ?</h1>
-                    <br />
+                    <h2 className="title2">Vous voulez en parler ?</h2>
+                    <br/>
                     <h1 className="title1">Un projet <br /> à réaliser ?</h1>
                 </div>
                 <div className="container-form-contact">
-                    <h1 className="title-contact">Contactez-moi</h1>
+                    <h2 className="title-contact">Contactez-moi</h2>
                     <form className="form-container-contact" onSubmit={handleSubmit}>
                         <div className="input-container">
                             <label className="input-label" htmlFor="name">Nom :</label>

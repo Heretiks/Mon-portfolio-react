@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import Lenis from '@studio-freight/lenis';
+
 import Index from './pages/Index';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -7,9 +9,7 @@ import Project from './components/Project';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound'
 
-//import Header from './components/Header';
-import Headerv2 from './components/Headerv2';
-
+import Headerv2 from './components/Header';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
 
@@ -26,6 +26,23 @@ function App() {
             sessionStorage.setItem('siteLoaded', 'true');
         }
         setHasLoadedBefore(!!alreadyLoaded); // Transforme en booléen
+
+        const lenis = new Lenis({
+            duration: 1.2, // Durée du scroll
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Fonction d'adoucissement
+            smooth: true, // Active le scroll fluide
+            effect: true, // Active les effets (parallax, ...)
+            touch: true,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        return () => lenis.destroy();
     }, []);
 
     useEffect(() => {
@@ -49,26 +66,6 @@ function App() {
     if (isLoading === null) {
         return null;
     }
-
-
-  /*return isLoading ? (
-      <Preloader />
-      ) : (
-      <>
-          <Headerv2 />
-          <Routes>
-              {/!* WIP : voir que faire pour la page index *!/}
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/:idB" element={<Project />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/not-found" element={<NotFound from="/projects" />} />
-              <Route path="*" element={<NotFound from="/" />} />
-          </Routes>
-          <Footer />
-      </>
-  );*/
 
     return (
         <>
