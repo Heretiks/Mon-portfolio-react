@@ -5,7 +5,7 @@
 @import 'notFound.css';
 
 @import './parts/footer.css';
-@import 'parts/header.css';
+@import './parts/header.css';
 @import './parts/preloader.css';
 @import './parts/sandSimulation.css';
 
@@ -78,6 +78,15 @@ body {
 	}
 
 
+	/* Footer */
+	.footer_copyright {
+
+		img {
+			transition: 0.3s ease-in;
+			filter: invert(100%);
+			-webkit-filter: invert(100%);
+		}
+	}
 
 
 	/* Page contact */

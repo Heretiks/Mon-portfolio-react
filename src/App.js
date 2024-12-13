@@ -55,7 +55,7 @@ function App() {
             const fakeDataFetch = () => {
                 setTimeout(() => {
                     setIsLoading(false);
-                }, 2000); // Simulation d'un chargement
+                }, 4000); // Simulation d'un chargement
             };
             fakeDataFetch();
         } else {

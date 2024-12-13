@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/global.css';
+import logoJL from '../assets/logo-JL-noir.webp'
 
 function Footer() {
 
@@ -138,11 +139,6 @@ function Footer() {
                             <div className="layout_item w-25">
                                 <button className="dark-mode-button" onClick={toggleDarkMode}>
 
-                                    {/*
-                                    ici mettre deux svg correspondant au mode clair et mode sombre,
-                                    et afficher celui qui correspond au style qui n'est pas actuellement affiché
-                                    */}
-
                                     {/* SVG Soleil */}
                                     <svg id="sun-icon" className={`icon ${isDarkMode ? 'active' : ''}`}
                                          xmlns="http://www.w3.org/2000/svg"
@@ -182,6 +178,7 @@ function Footer() {
                 </div>
                 <div className="footer_copyright">
                     <p>&copy; 2024 Julien Larguier.</p>
+                    <img src={logoJL} alt="Logo de Julien Larguier, le développeur du site"/>
                 </div>
             </div>
         </footer>

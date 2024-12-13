@@ -17,7 +17,7 @@
 	.projects {
 		display: flex;
 		flex-direction: column;
-		gap: 5px;
+		gap: 1vh;
 
 
 		.project {

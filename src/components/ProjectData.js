@@ -8,10 +8,10 @@ import client2 from '../assets/projects/project2/Logo-projet-2.png'
 
 import image6 from '../assets/projects/project6/Presentation-projet-6.webp'
 import SandSimulation from '../components/SandSimulation';
-import client6 from '../assets/projects/project6/Logo-projet-6.png'
+import client6 from '../assets/projects/project6/Logo-projet-6.webp'
 
 import image7 from '../assets/projects/project7/Presentation-projet-7.webp'
-import client7 from '../assets/projects/project7/Logo-projet-7.png'
+import client7 from '../assets/projects/project7/Logo-projet-7.webp'
 
 // Planners,
 // Nespresso map,
