@@ -9,7 +9,7 @@ Bienvenue sur le portfolio de **Julien Larguier**, développeur web freelance. C
 ## 👨‍💻 À propos du développeur
 Je suis **Julien Larguier**, développeur web freelance passionné par la création d'interfaces interactives et modernes. Ce portfolio illustre mon expertise technique et ma capacité à concevoir des expériences utilisateur de qualité.
 
-Retrouvez plus d’informations sur mes projets et compétences directement sur [mon site](url-de-mon-site-ici).
+Retrouvez plus d’informations sur mes projets et compétences directement sur [mon site](https://julienlarguier.com).
 
 ## 📅 Informations sur le projet
 - **Date de création :** Décembre 2024
